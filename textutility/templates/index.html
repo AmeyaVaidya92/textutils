@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta chaeset="utf-8">
+    <title>Index Page</title>
+   <style>
+body {background-color: powderblue;}
+h1   {color: black;}
+p    {color: red;}
+
+</style>
+  </head>
+  <body style="font-size:30px;">
+  <h1>Welcome to text analyzer . plz enter your text(:-)</h1>
+  
+  <form action='analyze/' method='post'>{% csrf_token %}
+
+      <textarea  name='text' style="margin: 0px 302.667px 0px 0px; width: 975px; height: 286px; color:red; font-size:30px;"></textarea>
+      <br>
+     
+      <input type="checkbox"  name="removepunc">Remove Punctuations<br>
+
+      <input type="checkbox"  name="fullcaps">UPPPER CASE<br>
+      <input type="checkbox"  name="newline">New Lines<br>
+      <input type="checkbox"  name="extraspaceremover">Space Remover<br>
+      <!--<input type="checkbox"  name="charcount">Total Letters<br>-->
+      <br>
+      <button type="submit" style="background-color:green; font-size:30px">Text Analyzer</button>
+  </form>
+  
+   
+  </body>
+</html>
